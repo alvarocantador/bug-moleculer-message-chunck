@@ -1,0 +1,312 @@
+[2021-06-08T23:36:18.875Z] INFO  broker-one/BROKER: Moleculer v0.14.13 is starting...
+[2021-06-08T23:36:18.876Z] INFO  broker-one/BROKER: Namespace: <not defined>
+[2021-06-08T23:36:18.876Z] INFO  broker-one/BROKER: Node ID: broker-one
+[2021-06-08T23:36:18.877Z] INFO  broker-one/REGISTRY: Strategy: RoundRobinStrategy
+[2021-06-08T23:36:18.877Z] INFO  broker-one/REGISTRY: Discoverer: LocalDiscoverer
+[2021-06-08T23:36:18.878Z] INFO  broker-one/BROKER: Serializer: JSONSerializer
+[2021-06-08T23:36:18.885Z] INFO  broker-one/BROKER: Validator: FastestValidator
+[2021-06-08T23:36:18.886Z] INFO  broker-one/BROKER: Registered 13 internal middleware(s).
+[2021-06-08T23:36:18.887Z] INFO  broker-one/BROKER: Transporter: NatsTransporter
+[2021-06-08T23:36:18.887Z] INFO  broker-one/BROKER: The broker built-in balancer is DISABLED.
+[2021-06-08T23:36:18.896Z] INFO  broker-two/BROKER: Moleculer v0.14.13 is starting...
+[2021-06-08T23:36:18.896Z] INFO  broker-two/BROKER: Namespace: <not defined>
+[2021-06-08T23:36:18.896Z] INFO  broker-two/BROKER: Node ID: broker-two
+[2021-06-08T23:36:18.896Z] INFO  broker-two/REGISTRY: Strategy: RoundRobinStrategy
+[2021-06-08T23:36:18.896Z] INFO  broker-two/REGISTRY: Discoverer: LocalDiscoverer
+[2021-06-08T23:36:18.897Z] INFO  broker-two/BROKER: Serializer: JSONSerializer
+[2021-06-08T23:36:18.897Z] INFO  broker-two/BROKER: Validator: FastestValidator
+[2021-06-08T23:36:18.897Z] INFO  broker-two/BROKER: Registered 13 internal middleware(s).
+[2021-06-08T23:36:18.897Z] INFO  broker-two/BROKER: Transporter: NatsTransporter
+[2021-06-08T23:36:18.897Z] INFO  broker-two/BROKER: The broker built-in balancer is DISABLED.
+[2021-06-08T23:36:18.903Z] INFO  broker-three/BROKER: Moleculer v0.14.13 is starting...
+[2021-06-08T23:36:18.903Z] INFO  broker-three/BROKER: Namespace: <not defined>
+[2021-06-08T23:36:18.903Z] INFO  broker-three/BROKER: Node ID: broker-three
+[2021-06-08T23:36:18.903Z] INFO  broker-three/REGISTRY: Strategy: RoundRobinStrategy
+[2021-06-08T23:36:18.903Z] INFO  broker-three/REGISTRY: Discoverer: LocalDiscoverer
+[2021-06-08T23:36:18.904Z] INFO  broker-three/BROKER: Serializer: JSONSerializer
+[2021-06-08T23:36:18.904Z] INFO  broker-three/BROKER: Validator: FastestValidator
+[2021-06-08T23:36:18.904Z] INFO  broker-three/BROKER: Registered 13 internal middleware(s).
+[2021-06-08T23:36:18.904Z] INFO  broker-three/BROKER: Transporter: NatsTransporter
+[2021-06-08T23:36:18.904Z] INFO  broker-three/BROKER: The broker built-in balancer is DISABLED.
+[2021-06-08T23:36:18.908Z] INFO  broker-one/TRANSIT: Connecting to the transporter...
+[2021-06-08T23:36:18.931Z] INFO  broker-one/TRANSPORTER: NATS client is connected.
+[2021-06-08T23:36:19.447Z] INFO  broker-one/REGISTRY: '$node' service is registered.
+[2021-06-08T23:36:19.447Z] INFO  broker-one/REGISTRY: 'bar' service is registered.
+[2021-06-08T23:36:19.448Z] INFO  broker-one/$NODE: Service '$node' started.
+[2021-06-08T23:36:19.448Z] INFO  broker-one/V1.BAR: Service 'v1.bar' started.
+[2021-06-08T23:36:19.455Z] INFO  broker-one/BROKER: ✔ ServiceBroker with 2 service(s) is started successfully in 548ms.
+[2021-06-08T23:36:19.456Z] INFO  broker-two/TRANSIT: Connecting to the transporter...
+[2021-06-08T23:36:19.463Z] INFO  broker-two/TRANSPORTER: NATS client is connected.
+[2021-06-08T23:36:19.470Z] INFO  broker-two/REGISTRY: Node 'broker-one' connected.
+[2021-06-08T23:36:19.975Z] INFO  broker-two/REGISTRY: '$node' service is registered.
+[2021-06-08T23:36:19.975Z] INFO  broker-two/REGISTRY: 'bar' service is registered.
+[2021-06-08T23:36:19.976Z] INFO  broker-two/$NODE: Service '$node' started.
+[2021-06-08T23:36:19.976Z] INFO  broker-two/V1.BAR: Service 'v1.bar' started.
+[2021-06-08T23:36:19.982Z] INFO  broker-two/BROKER: ✔ ServiceBroker with 2 service(s) is started successfully in 526ms.
+[2021-06-08T23:36:19.982Z] INFO  broker-three/TRANSIT: Connecting to the transporter...
+[2021-06-08T23:36:19.983Z] INFO  broker-one/REGISTRY: Node 'broker-two' connected.
+[2021-06-08T23:36:19.992Z] INFO  broker-three/TRANSPORTER: NATS client is connected.
+[2021-06-08T23:36:19.999Z] INFO  broker-three/REGISTRY: Node 'broker-one' connected.
+[2021-06-08T23:36:19.999Z] INFO  broker-three/REGISTRY: Node 'broker-two' connected.
+[2021-06-08T23:36:20.503Z] INFO  broker-three/REGISTRY: '$node' service is registered.
+[2021-06-08T23:36:20.503Z] INFO  broker-three/REGISTRY: 'foo' service is registered.
+[2021-06-08T23:36:20.503Z] INFO  broker-three/$NODE: Service '$node' started.
+[2021-06-08T23:36:20.503Z] INFO  broker-three/V1.FOO: Service 'v1.foo' started.
+[2021-06-08T23:36:20.511Z] INFO  broker-three/BROKER: ✔ ServiceBroker with 2 service(s) is started successfully in 529ms.
+[2021-06-08T23:36:20.512Z] INFO  broker-three/BROKER: Waiting for service(s) 'v1.bar, v1.foo'...
+[2021-06-08T23:36:20.512Z] INFO  broker-three/BROKER: Service(s) 'v1.bar, v1.foo' are available.
+[2021-06-08T23:36:20.513Z] INFO  broker-one/REGISTRY: Node 'broker-three' connected.
+[2021-06-08T23:36:20.514Z] INFO  broker-two/REGISTRY: Node 'broker-three' connected.
+[2021-06-08T23:36:20.516Z] INFO  broker-three/V1.FOO: reading file...
+[2021-06-08T23:36:20.517Z] INFO  broker-three/V1.FOO: file to stream completed.
+[2021-06-08T23:36:20.528Z] INFO  broker-one/V1.BAR: file received.
+[2021-06-08T23:36:20.528Z] INFO  broker-one/V1.BAR: file saved.
+[2021-06-08T23:36:20.542Z] INFO  broker-three/V1.FOO: stream sent.
+[2021-06-08T23:36:20.565Z] INFO  broker-two/TRANSIT: Put the chunk into pool (size: 0). Seq: 1
+[2021-06-08T23:36:20.565Z] INFO  broker-two/V1.BAR: file received.
+[2021-06-08T23:36:20.565Z] INFO  broker-two/V1.BAR: file saved.
+[2021-06-08T23:36:20.586Z] INFO  broker-two/TRANSIT: Put the chunk into pool (size: 1). Seq: 2
+[2021-06-08T23:36:20.593Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 0). Seq: 3
+[2021-06-08T23:36:20.615Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 1). Seq: 4
+[2021-06-08T23:36:20.627Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 2). Seq: 5
+[2021-06-08T23:36:20.649Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 3). Seq: 6
+[2021-06-08T23:36:20.664Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 4). Seq: 7
+[2021-06-08T23:36:20.693Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 5). Seq: 8
+[2021-06-08T23:36:20.701Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 6). Seq: 9
+[2021-06-08T23:36:20.712Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 7). Seq: 10
+[2021-06-08T23:36:20.727Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 8). Seq: 11
+[2021-06-08T23:36:20.732Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 9). Seq: 12
+[2021-06-08T23:36:20.767Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 10). Seq: 13
+[2021-06-08T23:36:20.776Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 11). Seq: 14
+[2021-06-08T23:36:20.784Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 12). Seq: 15
+[2021-06-08T23:36:20.793Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 13). Seq: 16
+[2021-06-08T23:36:20.797Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 14). Seq: 17
+[2021-06-08T23:36:20.816Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 15). Seq: 18
+[2021-06-08T23:36:20.823Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 16). Seq: 19
+[2021-06-08T23:36:20.845Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 17). Seq: 20
+[2021-06-08T23:36:20.857Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 18). Seq: 21
+[2021-06-08T23:36:20.874Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 19). Seq: 22
+[2021-06-08T23:36:20.887Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 20). Seq: 23
+[2021-06-08T23:36:20.914Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 21). Seq: 24
+[2021-06-08T23:36:20.937Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 22). Seq: 25
+[2021-06-08T23:36:20.951Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 23). Seq: 26
+[2021-06-08T23:36:20.959Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 24). Seq: 27
+[2021-06-08T23:36:20.976Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 25). Seq: 28
+[2021-06-08T23:36:20.998Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 26). Seq: 29
+[2021-06-08T23:36:21.015Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 27). Seq: 30
+[2021-06-08T23:36:21.028Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 28). Seq: 31
+[2021-06-08T23:36:21.053Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 29). Seq: 32
+[2021-06-08T23:36:21.065Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 30). Seq: 33
+[2021-06-08T23:36:21.083Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 31). Seq: 34
+[2021-06-08T23:36:21.109Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 32). Seq: 35
+[2021-06-08T23:36:21.124Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 33). Seq: 36
+[2021-06-08T23:36:21.148Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 34). Seq: 37
+[2021-06-08T23:36:21.161Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 35). Seq: 38
+[2021-06-08T23:36:21.184Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 36). Seq: 39
+[2021-06-08T23:36:21.201Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 37). Seq: 40
+[2021-06-08T23:36:21.217Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 38). Seq: 41
+[2021-06-08T23:36:21.220Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 39). Seq: 42
+[2021-06-08T23:36:21.251Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 40). Seq: 43
+[2021-06-08T23:36:21.265Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 41). Seq: 44
+[2021-06-08T23:36:21.280Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 42). Seq: 45
+[2021-06-08T23:36:21.296Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 43). Seq: 46
+[2021-06-08T23:36:21.306Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 44). Seq: 47
+[2021-06-08T23:36:21.322Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 45). Seq: 48
+[2021-06-08T23:36:21.342Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 46). Seq: 49
+[2021-06-08T23:36:21.362Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 47). Seq: 50
+[2021-06-08T23:36:21.379Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 48). Seq: 51
+[2021-06-08T23:36:21.394Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 49). Seq: 52
+[2021-06-08T23:36:21.403Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 50). Seq: 53
+[2021-06-08T23:36:21.427Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 51). Seq: 54
+[2021-06-08T23:36:21.431Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 52). Seq: 55
+[2021-06-08T23:36:21.458Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 53). Seq: 56
+[2021-06-08T23:36:21.468Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 54). Seq: 57
+[2021-06-08T23:36:21.485Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 55). Seq: 58
+[2021-06-08T23:36:21.502Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 56). Seq: 59
+[2021-06-08T23:36:21.512Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 57). Seq: 60
+[2021-06-08T23:36:21.528Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 58). Seq: 61
+[2021-06-08T23:36:21.549Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 59). Seq: 62
+[2021-06-08T23:36:21.558Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 60). Seq: 63
+[2021-06-08T23:36:21.573Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 61). Seq: 64
+[2021-06-08T23:36:21.604Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 62). Seq: 65
+[2021-06-08T23:36:21.619Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 63). Seq: 66
+[2021-06-08T23:36:21.623Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 64). Seq: 67
+[2021-06-08T23:36:21.641Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 65). Seq: 68
+[2021-06-08T23:36:21.656Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 66). Seq: 69
+[2021-06-08T23:36:21.660Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 67). Seq: 70
+[2021-06-08T23:36:21.679Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 68). Seq: 71
+[2021-06-08T23:36:21.697Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 69). Seq: 72
+[2021-06-08T23:36:21.722Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 70). Seq: 73
+[2021-06-08T23:36:21.726Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 71). Seq: 74
+[2021-06-08T23:36:21.749Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 72). Seq: 75
+[2021-06-08T23:36:21.772Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 73). Seq: 76
+[2021-06-08T23:36:21.792Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 74). Seq: 77
+[2021-06-08T23:36:21.811Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 75). Seq: 78
+[2021-06-08T23:36:21.829Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 76). Seq: 79
+[2021-06-08T23:36:21.840Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 77). Seq: 80
+[2021-06-08T23:36:21.865Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 78). Seq: 81
+[2021-06-08T23:36:21.894Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 79). Seq: 82
+[2021-06-08T23:36:21.908Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 80). Seq: 83
+[2021-06-08T23:36:21.924Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 81). Seq: 84
+[2021-06-08T23:36:21.942Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 82). Seq: 85
+[2021-06-08T23:36:21.980Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 83). Seq: 86
+[2021-06-08T23:36:22.000Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 84). Seq: 87
+[2021-06-08T23:36:22.015Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 85). Seq: 88
+[2021-06-08T23:36:22.051Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 86). Seq: 89
+[2021-06-08T23:36:22.062Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 87). Seq: 90
+[2021-06-08T23:36:22.085Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 88). Seq: 91
+[2021-06-08T23:36:22.110Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 89). Seq: 92
+[2021-06-08T23:36:22.125Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 90). Seq: 93
+[2021-06-08T23:36:22.141Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 91). Seq: 94
+[2021-06-08T23:36:22.151Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 92). Seq: 95
+[2021-06-08T23:36:22.179Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 93). Seq: 96
+[2021-06-08T23:36:22.194Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 94). Seq: 97
+[2021-06-08T23:36:22.207Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 95). Seq: 98
+[2021-06-08T23:36:22.236Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 96). Seq: 99
+[2021-06-08T23:36:22.258Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 97). Seq: 100
+[2021-06-08T23:36:22.264Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 98). Seq: 101
+[2021-06-08T23:36:22.278Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 99). Seq: 102
+[2021-06-08T23:36:22.295Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 100). Seq: 103
+[2021-06-08T23:36:22.312Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 101). Seq: 104
+[2021-06-08T23:36:22.335Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 102). Seq: 105
+[2021-06-08T23:36:22.350Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 103). Seq: 106
+[2021-06-08T23:36:22.371Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 104). Seq: 107
+[2021-06-08T23:36:22.394Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 105). Seq: 108
+[2021-06-08T23:36:22.416Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 106). Seq: 109
+[2021-06-08T23:36:22.433Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 107). Seq: 110
+[2021-06-08T23:36:22.449Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 108). Seq: 111
+[2021-06-08T23:36:22.471Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 109). Seq: 112
+[2021-06-08T23:36:22.491Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 110). Seq: 113
+[2021-06-08T23:36:22.518Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 111). Seq: 114
+[2021-06-08T23:36:22.539Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 112). Seq: 115
+[2021-06-08T23:36:22.559Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 113). Seq: 116
+[2021-06-08T23:36:22.571Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 114). Seq: 117
+[2021-06-08T23:36:22.590Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 115). Seq: 118
+[2021-06-08T23:36:22.609Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 116). Seq: 119
+[2021-06-08T23:36:22.619Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 117). Seq: 120
+[2021-06-08T23:36:22.641Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 118). Seq: 121
+[2021-06-08T23:36:22.659Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 119). Seq: 122
+[2021-06-08T23:36:22.680Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 120). Seq: 123
+[2021-06-08T23:36:22.700Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 121). Seq: 124
+[2021-06-08T23:36:22.714Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 122). Seq: 125
+[2021-06-08T23:36:22.722Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 123). Seq: 126
+[2021-06-08T23:36:22.736Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 124). Seq: 127
+[2021-06-08T23:36:22.750Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 125). Seq: 128
+[2021-06-08T23:36:22.759Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 126). Seq: 129
+[2021-06-08T23:36:22.775Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 127). Seq: 130
+[2021-06-08T23:36:22.798Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 128). Seq: 131
+[2021-06-08T23:36:22.811Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 129). Seq: 132
+[2021-06-08T23:36:22.829Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 130). Seq: 133
+[2021-06-08T23:36:22.846Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 131). Seq: 134
+[2021-06-08T23:36:22.864Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 132). Seq: 135
+[2021-06-08T23:36:22.886Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 133). Seq: 136
+[2021-06-08T23:36:22.902Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 134). Seq: 137
+[2021-06-08T23:36:22.922Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 135). Seq: 138
+[2021-06-08T23:36:22.943Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 136). Seq: 139
+[2021-06-08T23:36:22.956Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 137). Seq: 140
+[2021-06-08T23:36:22.973Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 138). Seq: 141
+[2021-06-08T23:36:22.987Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 139). Seq: 142
+[2021-06-08T23:36:23.005Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 140). Seq: 143
+[2021-06-08T23:36:23.019Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 141). Seq: 144
+[2021-06-08T23:36:23.032Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 142). Seq: 145
+[2021-06-08T23:36:23.049Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 143). Seq: 146
+[2021-06-08T23:36:23.068Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 144). Seq: 147
+[2021-06-08T23:36:23.076Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 145). Seq: 148
+[2021-06-08T23:36:23.095Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 146). Seq: 149
+[2021-06-08T23:36:23.112Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 147). Seq: 150
+[2021-06-08T23:36:23.130Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 148). Seq: 151
+[2021-06-08T23:36:23.148Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 149). Seq: 152
+[2021-06-08T23:36:23.164Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 150). Seq: 153
+[2021-06-08T23:36:23.183Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 151). Seq: 154
+[2021-06-08T23:36:23.204Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 152). Seq: 155
+[2021-06-08T23:36:23.219Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 153). Seq: 156
+[2021-06-08T23:36:23.238Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 154). Seq: 157
+[2021-06-08T23:36:23.262Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 155). Seq: 158
+[2021-06-08T23:36:23.278Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 156). Seq: 159
+[2021-06-08T23:36:23.286Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 157). Seq: 160
+[2021-06-08T23:36:23.314Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 158). Seq: 161
+[2021-06-08T23:36:23.334Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 159). Seq: 162
+[2021-06-08T23:36:23.346Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 160). Seq: 163
+[2021-06-08T23:36:23.405Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 161). Seq: 164
+[2021-06-08T23:36:23.417Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 162). Seq: 165
+[2021-06-08T23:36:23.436Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 163). Seq: 166
+[2021-06-08T23:36:23.452Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 164). Seq: 167
+[2021-06-08T23:36:23.469Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 165). Seq: 168
+[2021-06-08T23:36:23.483Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 166). Seq: 169
+[2021-06-08T23:36:23.506Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 167). Seq: 170
+[2021-06-08T23:36:23.522Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 168). Seq: 171
+[2021-06-08T23:36:23.541Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 169). Seq: 172
+[2021-06-08T23:36:23.555Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 170). Seq: 173
+[2021-06-08T23:36:23.572Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 171). Seq: 174
+[2021-06-08T23:36:23.584Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 172). Seq: 175
+[2021-06-08T23:36:23.600Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 173). Seq: 176
+[2021-06-08T23:36:23.612Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 174). Seq: 177
+[2021-06-08T23:36:23.626Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 175). Seq: 178
+[2021-06-08T23:36:23.635Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 176). Seq: 179
+[2021-06-08T23:36:23.648Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 177). Seq: 180
+[2021-06-08T23:36:23.668Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 178). Seq: 181
+[2021-06-08T23:36:23.683Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 179). Seq: 182
+[2021-06-08T23:36:23.697Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 180). Seq: 183
+[2021-06-08T23:36:23.713Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 181). Seq: 184
+[2021-06-08T23:36:23.728Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 182). Seq: 185
+[2021-06-08T23:36:23.743Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 183). Seq: 186
+[2021-06-08T23:36:23.754Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 184). Seq: 187
+[2021-06-08T23:36:23.774Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 185). Seq: 188
+[2021-06-08T23:36:23.786Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 186). Seq: 189
+[2021-06-08T23:36:23.802Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 187). Seq: 190
+[2021-06-08T23:36:23.827Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 188). Seq: 191
+[2021-06-08T23:36:23.844Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 189). Seq: 192
+[2021-06-08T23:36:23.865Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 190). Seq: 193
+[2021-06-08T23:36:23.878Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 191). Seq: 194
+[2021-06-08T23:36:23.896Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 192). Seq: 195
+[2021-06-08T23:36:23.912Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 193). Seq: 196
+[2021-06-08T23:36:23.926Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 194). Seq: 197
+[2021-06-08T23:36:23.940Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 195). Seq: 198
+[2021-06-08T23:36:23.957Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 196). Seq: 199
+[2021-06-08T23:36:23.968Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 197). Seq: 200
+[2021-06-08T23:36:23.982Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 198). Seq: 201
+[2021-06-08T23:36:23.994Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 199). Seq: 202
+[2021-06-08T23:36:24.002Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 200). Seq: 203
+[2021-06-08T23:36:24.024Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 201). Seq: 204
+[2021-06-08T23:36:24.035Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 202). Seq: 205
+[2021-06-08T23:36:24.044Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 203). Seq: 206
+[2021-06-08T23:36:24.053Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 204). Seq: 207
+[2021-06-08T23:36:24.066Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 205). Seq: 208
+[2021-06-08T23:36:24.080Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 206). Seq: 209
+[2021-06-08T23:36:24.087Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 207). Seq: 210
+[2021-06-08T23:36:24.107Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 208). Seq: 211
+[2021-06-08T23:36:24.116Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 209). Seq: 212
+[2021-06-08T23:36:24.129Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 210). Seq: 213
+[2021-06-08T23:36:24.137Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 211). Seq: 214
+[2021-06-08T23:36:24.153Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 212). Seq: 215
+[2021-06-08T23:36:24.165Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 213). Seq: 216
+[2021-06-08T23:36:24.187Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 214). Seq: 217
+[2021-06-08T23:36:24.203Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 215). Seq: 218
+[2021-06-08T23:36:24.253Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 216). Seq: 219
+[2021-06-08T23:36:24.266Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 217). Seq: 220
+[2021-06-08T23:36:24.288Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 218). Seq: 221
+[2021-06-08T23:36:24.299Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 219). Seq: 222
+[2021-06-08T23:36:24.312Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 220). Seq: 223
+[2021-06-08T23:36:24.331Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 221). Seq: 224
+[2021-06-08T23:36:24.351Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 222). Seq: 225
+[2021-06-08T23:36:24.363Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 223). Seq: 226
+[2021-06-08T23:36:24.378Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 224). Seq: 227
+[2021-06-08T23:36:24.396Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 225). Seq: 228
+[2021-06-08T23:36:24.409Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 226). Seq: 229
+[2021-06-08T23:36:24.425Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 227). Seq: 230
+[2021-06-08T23:36:24.432Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 228). Seq: 231
+[2021-06-08T23:36:24.448Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 229). Seq: 232
+[2021-06-08T23:36:24.458Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 230). Seq: 233
+[2021-06-08T23:36:24.471Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 231). Seq: 234
+[2021-06-08T23:36:24.487Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 232). Seq: 235
+[2021-06-08T23:36:24.504Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 233). Seq: 236
+[2021-06-08T23:36:24.518Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 234). Seq: 237
+[2021-06-08T23:36:24.534Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 235). Seq: 238
+[2021-06-08T23:36:24.546Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 236). Seq: 239
+[2021-06-08T23:36:24.550Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 237). Seq: 240
+[2021-06-08T23:36:24.550Z] INFO  broker-one/TRANSIT: Put the chunk into pool (size: 238). Seq: 241
+
+-----
+
+-rw-r--r--   1 alvaro  1241885955         0 Jun  8 20:36 sample-parsed.pdf
+-rw-------   1 alvaro  1241885955  15728363 Jun  8 19:39 sample.pdf
